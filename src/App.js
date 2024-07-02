@@ -1,4 +1,6 @@
 import Users from "./components/Users";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 let listOfUser = [
   {
@@ -55,6 +57,10 @@ let listOfUser = [
 let App = () => {
   return (
     <div className="user_container">
+      <div className="search">
+          <input type="text" placeholder="Search ..." />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+      </div>
       {
         listOfUser.map((item) => {
           return (
